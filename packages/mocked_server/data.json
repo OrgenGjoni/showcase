@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "username": "test",
+            "bio": "lorem ispum",
+            "followersAmount": 3000,
+            "location": "Spain"
+        }
+    ]
+}
