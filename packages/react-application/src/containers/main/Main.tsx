@@ -10,7 +10,7 @@ const Main: React.FC<Props> = ({children})=>{
 
     return (
         <div className="main-container">
-            <SearchBar />
+            <SearchBar results={["aaaa", "bbbbbb"]} />
         </div>
     );
 }
