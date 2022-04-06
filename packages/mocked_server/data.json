@@ -5,6 +5,24 @@
             "bio": "lorem ispum",
             "followersAmount": 3000,
             "location": "Spain"
+        },
+        {
+            "username": "foo",
+            "bio": "lorem ispum",
+            "followersAmount": 3000,
+            "location": "Spain"
+        },
+        {
+            "username": "bar",
+            "bio": "lorem ispum",
+            "followersAmount": 3000,
+            "location": "Spain"
+        },
+        {
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 3000,
+            "location": "Spain"
         }
     ]
 }

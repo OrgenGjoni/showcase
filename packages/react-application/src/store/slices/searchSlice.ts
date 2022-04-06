@@ -26,7 +26,12 @@ export const searchSlice = createSlice({
       }
   },
   extraReducers: (builder)=>{
-      builder.addCase(fetchUsers.fulfilled, (state: SearchState, action: {payload: user[]} )=>{
+      builder
+      .addCase(fetchUsers.pending, (state: SearchState)=>{
+        state.loading = true;
+      })
+      .addCase(fetchUsers.fulfilled, (state: SearchState, action: {payload: user[]} )=>{
+        state.loading = false;
         state.result = action.payload;
       });
   }

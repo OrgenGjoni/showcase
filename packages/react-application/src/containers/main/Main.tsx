@@ -1,16 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./main.scss";
+import { useAppDispatch, useAppSelector } from "../../hooks";
+import { fetchUsers } from "../../store/slices/searchSlice";
 import { SearchBar } from "../../components";
 
-interface Props{
-    children: JSX.Element | JSX.Element[]
-}
+const Main: React.FC = ()=>{
 
-const Main: React.FC<Props> = ({children})=>{
+    const dispatch = useAppDispatch();
+    const { result, loading } = useAppSelector( state => state.search);
+
+    useEffect(()=>{
+        dispatch(fetchUsers());
+    }, []);
 
     return (
         <div className="main-container">
-            <SearchBar results={["aaaa", "bbbbbb"]} />
+            <SearchBar results={result} />
         </div>
     );
 }
