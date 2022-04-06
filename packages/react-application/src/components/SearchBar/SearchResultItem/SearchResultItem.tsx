@@ -1,9 +1,9 @@
-import React from 'react'
-import { user } from '../../../types/user.type'
-import './search_result_item.scss'
+import React from 'react';
+import { user } from '../../../types/user.type';
+import './search_result_item.scss';
 
 interface SearchResultItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
-  user: user
+  user: user;
 }
 
 const SearchResultItem: React.FC<SearchResultItemProps> = ({
@@ -20,7 +20,7 @@ const SearchResultItem: React.FC<SearchResultItemProps> = ({
         </div>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default SearchResultItem
+export default SearchResultItem;

@@ -1,3 +1,3 @@
-import { useAppDispatch, useAppSelector } from './reduxHooks'
+import { useAppDispatch, useAppSelector } from './reduxHooks';
 
-export { useAppDispatch, useAppSelector }
+export { useAppDispatch, useAppSelector };
