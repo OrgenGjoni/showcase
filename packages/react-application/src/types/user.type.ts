@@ -1,6 +1,7 @@
 export type user = {
   username: string
   bio: string
-  followersCount: number
+  location: string
+  followersAmount: number
   profilePicSrc: string
 }

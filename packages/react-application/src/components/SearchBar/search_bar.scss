@@ -17,6 +17,10 @@
     overflow: hidden;
     &--hidden {
       visibility: collapse;
+      height: 0px;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
     }
   }
 }

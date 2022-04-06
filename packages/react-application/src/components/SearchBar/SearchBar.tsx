@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect, MouseEventHandler } from 'react'
 import './search_bar.scss'
 import { user } from '../../types/user.type'
+import SearchResultItem from './SearchResultItem/SearchResultItem'
 
 interface SearchBarProps {
   results: user[] | null
@@ -9,11 +10,16 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ results }) => {
   const [matches, setMatches] = useState<user[] | null>(null)
   const [open, setOpen] = useState<boolean>(false)
+  const searchBarRef = useRef<null | HTMLDivElement>(null)
 
   const renderList = () => {
     if (matches) {
       return matches.map((el: user, idx: number) => (
-        <li key={idx}>{el.username}</li>
+        <SearchResultItem
+          user={el}
+          key={idx}
+          onClick={() => console.log('clicked')}
+        />
       ))
     }
   }
@@ -32,11 +38,28 @@ const SearchBar: React.FC<SearchBarProps> = ({ results }) => {
   }
 
   const handleBlur = () => {
+    console.log(document.activeElement)
     setOpen(false)
   }
 
+  const verifyTarget = (e: MouseEvent) => {
+    if (!searchBarRef.current?.contains(e.target as any)) {
+      setOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    if (open) {
+      document.addEventListener('click', verifyTarget)
+
+      return () => {
+        document.removeEventListener('click', verifyTarget)
+      }
+    }
+  })
+
   return (
-    <div className="search-bar" onFocus={handleFocus} onBlur={handleBlur}>
+    <div className="search-bar" onFocus={handleFocus} ref={searchBarRef}>
       <input
         type="text"
         className="search-bar__input"
