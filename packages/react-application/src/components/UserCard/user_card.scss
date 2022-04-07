@@ -9,7 +9,7 @@
   padding: 30px;
   background-color: #ffff;
   border-radius: 10px;
-  box-shadow: 0 0 5pt 2pt gray;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -21,7 +21,7 @@
       position: absolute;
       top: -50px;
       width: 175px;
-      height: 250px;
+      height: 240px;
       border-radius: 10px;
     }
   }

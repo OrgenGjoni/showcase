@@ -19,7 +19,9 @@ const UserCard = () => {
           📍 Lisbon ✈️ Flight attendant | TAP 🐶 @ben_mel_goldenretrievers 🐾
         </span>
         <span>fashion-travel-food-health</span>
-        <span className="user-card__data-location">London, UK &nbsp; <IoMail /></span>
+        <span className="user-card__data-location">
+          London, UK &nbsp; <IoMail />
+        </span>
       </div>
       <div className="user-card__extra">
         <FiUsers className="user-card__extra-icon" />

@@ -5,4 +5,5 @@ export type user = {
   location: string;
   followersAmount: number;
   profilePicSrc: string;
+  topics: string[];
 };
