@@ -13,7 +13,7 @@ const SearchResultItem: React.FC<SearchResultItemProps> = ({
   return (
     <li {...props} className="result-item">
       <div className="result-item__inner">
-        <img src={user.profilePicSrc} />
+        <img src={user.profilePicSrc} loading="lazy" />
         <div className="result-item__inner-data">
           <span>{user.username}</span>
           <small>{user.followersAmount}</small>

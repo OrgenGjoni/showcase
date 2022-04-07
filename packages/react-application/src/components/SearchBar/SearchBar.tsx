@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, MouseEventHandler } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './search_bar.scss';
 import { user } from '../../types/user.type';
 import SearchResultItem from './SearchResultItem/SearchResultItem';
@@ -42,11 +42,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ results, action }) => {
     setOpen(false);
   };
 
-  const renderList = () => {
+  const renderList = (): React.ReactElement<HTMLLIElement>[] | null => {
     if (matches) {
       return matches.map((el: user, idx: number) => (
         <SearchResultItem user={el} key={idx} onClick={handleAction} />
       ));
+    } else {
+      return null;
     }
   };
 

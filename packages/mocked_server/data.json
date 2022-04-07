@@ -1,28 +1,36 @@
 {
     "users": [
         {
+            "id": 1,
             "username": "test",
             "bio": "lorem ispum",
             "followersAmount": 3000,
-            "location": "Spain"
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         },
         {
+            "id": 2,
             "username": "foo",
             "bio": "lorem ispum",
             "followersAmount": 3000,
-            "location": "Spain"
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         },
         {
+            "id": 3,
             "username": "bar",
             "bio": "lorem ispum",
             "followersAmount": 3000,
-            "location": "Spain"
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         },
         {
+            "id": 4,
             "username": "baz",
             "bio": "lorem ispum",
             "followersAmount": 3000,
-            "location": "Spain"
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         }
     ]
 }

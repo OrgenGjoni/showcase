@@ -2,19 +2,33 @@
 
 .search-bar {
   position: relative;
-  width: 200px;
+  width: 300px;
   &__input {
     width: 100%;
-    border-radius: 5px;
+    padding: 0.5em;
+    border-radius: 2%;
+    border: solid 1px grey;
+    &:focus-visible {
+        box-shadow: 0 0 7pt 1pt #878686;
+        outline: none;
+    }
   }
   &__results {
     position: absolute;
-    padding: 3px;
+    background-color: white;
+    padding: 0.4em;
     margin: 0px;
-    border: solid 1px red;
+    border: solid 1px rgb(215, 199, 199);
     width: 100%;
     list-style-type: none;
     overflow: hidden;
+    > li:not(:last-child)::after{
+        content: "";
+        display: block;
+        background-color: grey;
+        height: 1px;
+        width: 100%;
+    }
     &--hidden {
       visibility: collapse;
       height: 0px;
