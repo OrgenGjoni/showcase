@@ -1,6 +1,7 @@
 import React from 'react';
 import { user } from '../../../types/user.type';
 import './search_result_item.scss';
+import { normalizeAmount } from '../../../utils';
 
 interface SearchResultItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   user: user;
@@ -16,7 +17,7 @@ const SearchResultItem: React.FC<SearchResultItemProps> = ({
         <img src={user.profilePicSrc} loading="lazy" />
         <div className="result-item__inner-data">
           <span>{user.username}</span>
-          <small>{user.followersAmount}</small>
+          <small>{normalizeAmount(user.followersAmount)}</small>
         </div>
       </div>
     </li>

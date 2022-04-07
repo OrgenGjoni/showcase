@@ -19,6 +19,7 @@ const Main: React.FC = () => {
         action={() => {
           console.log('test');
         }}
+        inputProps={{placeholder: "Search by username",}}
       />
     </div>
   );

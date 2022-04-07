@@ -12,7 +12,7 @@
             "id": 2,
             "username": "foo",
             "bio": "lorem ispum",
-            "followersAmount": 3000,
+            "followersAmount": 3200,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "username": "bar",
             "bio": "lorem ispum",
-            "followersAmount": 3000,
+            "followersAmount": 90000,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "username": "baz",
             "bio": "lorem ispum",
-            "followersAmount": 3000,
+            "followersAmount": 23453345,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         }

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, HTMLAttributes, HtmlHTMLAttributes } from 'react';
 import './search_bar.scss';
 import { user } from '../../types/user.type';
 import SearchResultItem from './SearchResultItem/SearchResultItem';
@@ -6,9 +6,10 @@ import SearchResultItem from './SearchResultItem/SearchResultItem';
 interface SearchBarProps {
   results: user[] | null;
   action: () => void;
+  inputProps?: React.HTMLAttributes<HTMLInputElement>
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ results, action }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ results, action, inputProps }) => {
   const [matches, setMatches] = useState<user[] | null>(null);
   const [open, setOpen] = useState<boolean>(false);
   const searchBarRef = useRef<null | HTMLDivElement>(null);
@@ -24,11 +25,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ results, action }) => {
 
   const handleFocus = () => {
     setOpen(true);
-  };
-
-  const handleBlur = () => {
-    console.log(document.activeElement);
-    setOpen(false);
   };
 
   const verifyTarget = (e: MouseEvent) => {
@@ -65,12 +61,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ results, action }) => {
   return (
     <div className="search-bar" onFocus={handleFocus} ref={searchBarRef}>
       <input
+        {...inputProps}
         type="text"
         className="search-bar__input"
         onChange={handleChange}
-        tabIndex={0}
       />
-      <ul className={`search-bar__results${open ? '' : '--hidden'}`}>
+      <ul className={`search-bar__results${ !!renderList() ? '' : '--hidden'}`}>
         {renderList()}
       </ul>
     </div>
