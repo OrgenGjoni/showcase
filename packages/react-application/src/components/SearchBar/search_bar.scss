@@ -27,6 +27,7 @@
     width: 100%;
     list-style-type: none;
     overflow: hidden;
+    z-index: 10000;
     > li:not(:last-child) {
       border-bottom: solid 1px grey;
     }

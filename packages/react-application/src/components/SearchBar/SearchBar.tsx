@@ -88,7 +88,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
         }`}
       >
         {renderList()}
-        <ResultsStatus resLength={totalMatchLen} showPoint={maxToShow} />
+        <ResultsStatus
+          resLength={totalMatchLen}
+          showPoint={maxToShow}
+          showAllAction={() => {
+            console.log("Clicked show all");
+          }}
+        />
       </ul>
     </div>
   );
