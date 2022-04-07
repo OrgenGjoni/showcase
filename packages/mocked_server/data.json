@@ -31,6 +31,62 @@
             "followersAmount": 23453345,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+        },
+        {
+            "id": 5,
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+        },
+        {
+            "id": 6,
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+        },
+        {
+            "id": 7,
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+        },
+        {
+            "id": 8,
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+        },
+        {
+            "id": 9,
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+        },
+        {
+            "id": 10,
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+        },
+        {
+            "id": 11,
+            "username": "baz",
+            "bio": "lorem ispum",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
         }
     ]
 }

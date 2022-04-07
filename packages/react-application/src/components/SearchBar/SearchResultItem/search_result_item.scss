@@ -17,6 +17,9 @@
       display: flex;
       flex-direction: column;
       padding: 3px 10px;
+      &__icon {
+        margin-bottom: -2px;
+      }
     }
   }
 }

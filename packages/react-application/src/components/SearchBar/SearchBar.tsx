@@ -2,14 +2,16 @@ import React, { useState, useRef, useEffect, HTMLAttributes, HtmlHTMLAttributes 
 import './search_bar.scss';
 import { user } from '../../types/user.type';
 import SearchResultItem from './SearchResultItem/SearchResultItem';
+import { GoSearch } from 'react-icons/go';
 
 interface SearchBarProps {
   results: user[] | null;
   action: () => void;
+  maxToShow: number;
   inputProps?: React.HTMLAttributes<HTMLInputElement>
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ results, action, inputProps }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ results, action, maxToShow, inputProps }) => {
   const [matches, setMatches] = useState<user[] | null>(null);
   const [open, setOpen] = useState<boolean>(false);
   const searchBarRef = useRef<null | HTMLDivElement>(null);
@@ -19,7 +21,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ results, action, inputProps }) =>
       const regexp = new RegExp(`${e.target.value}`, 'i');
       const match = results.filter((el) => el.username.match(regexp));
 
-      setMatches(e.target.value.length > 0 ? match : null);
+      setMatches(e.target.value.length > 0 ? match.slice(0, maxToShow) : null);
     }
   };
 
@@ -60,6 +62,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ results, action, inputProps }) =>
 
   return (
     <div className="search-bar" onFocus={handleFocus} ref={searchBarRef}>
+        <GoSearch className="search-bar__search-icon" />
       <input
         {...inputProps}
         type="text"

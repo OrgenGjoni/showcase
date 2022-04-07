@@ -4,14 +4,19 @@
   position: relative;
   width: 300px;
   &__input {
-    width: 100%;
-    padding: 0.5em;
+    width: 275px;
+    padding: 0.5em 2.3em 0.5em 0.5em;
     border-radius: 2%;
     border: solid 1px grey;
     &:focus-visible {
         box-shadow: 0 0 7pt 1pt #878686;
         outline: none;
     }
+  }
+  &__search-icon {
+    position: absolute;
+    top: 0.5em;
+    right: 0.1em;
   }
   &__results {
     position: absolute;
@@ -22,12 +27,8 @@
     width: 100%;
     list-style-type: none;
     overflow: hidden;
-    > li:not(:last-child)::after{
-        content: "";
-        display: block;
-        background-color: grey;
-        height: 1px;
-        width: 100%;
+    > li:not(:last-child) {
+        border-bottom: solid 1px grey;
     }
     &--hidden {
       visibility: collapse;

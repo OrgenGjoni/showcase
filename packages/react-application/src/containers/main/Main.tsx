@@ -19,6 +19,7 @@ const Main: React.FC = () => {
         action={() => {
           console.log('test');
         }}
+        maxToShow={4}
         inputProps={{placeholder: "Search by username",}}
       />
     </div>
