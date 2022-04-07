@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./main.scss";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchUsers } from "../../store/slices/searchSlice";
-import { SearchBar, NavBar } from "../../components";
+import { SearchBar, NavBar, UserCard } from "../../components";
 import { Routes, Route } from "react-router-dom";
 
 const Main: React.FC = () => {
@@ -27,7 +27,7 @@ const Main: React.FC = () => {
       </NavBar>
       <div>
         <Routes>
-          <Route path="/" element={<div>Test</div>} />
+          <Route path="/user/:id" element={<UserCard />} />
         </Routes>
       </div>
     </div>
