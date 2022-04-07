@@ -1,6 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import RESTService from '../../services/RESTService';
-import { user } from '../../types/user.type';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import RESTService from "../../services/RESTService";
+import { user } from "../../types/user.type";
 
 export interface SearchState {
   result: null | user[];
@@ -13,15 +13,15 @@ const initialState: SearchState = {
 };
 
 const fetchUsers = createAsyncThunk(
-  'search/fetchUsers',
+  "search/fetchUsers",
   async (_, thunkAPI) => {
-    const res: user[] = await RESTService.get<user[]>('/users');
+    const res: user[] = await RESTService.get<user[]>("/users");
     return res;
   }
 );
 
 export const searchSlice = createSlice({
-  name: 'counter',
+  name: "counter",
   initialState,
   reducers: {
     setLoading: (state: SearchState, action: { payload: boolean }) => {

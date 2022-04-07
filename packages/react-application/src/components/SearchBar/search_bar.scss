@@ -1,4 +1,4 @@
-@import '../../scss/main';
+@import "../../scss/main";
 
 .search-bar {
   position: relative;
@@ -9,8 +9,8 @@
     border-radius: 2%;
     border: solid 1px grey;
     &:focus-visible {
-        box-shadow: 0 0 7pt 1pt #878686;
-        outline: none;
+      box-shadow: 0 0 7pt 1pt #878686;
+      outline: none;
     }
   }
   &__search-icon {
@@ -28,7 +28,7 @@
     list-style-type: none;
     overflow: hidden;
     > li:not(:last-child) {
-        border-bottom: solid 1px grey;
+      border-bottom: solid 1px grey;
     }
     &--hidden {
       visibility: collapse;

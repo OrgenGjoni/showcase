@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import './main.scss';
-import { useAppDispatch, useAppSelector } from '../../hooks';
-import { fetchUsers } from '../../store/slices/searchSlice';
-import { SearchBar } from '../../components';
+import React, { useEffect } from "react";
+import "./main.scss";
+import { useAppDispatch, useAppSelector } from "../../hooks";
+import { fetchUsers } from "../../store/slices/searchSlice";
+import { SearchBar } from "../../components";
 
 const Main: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -17,10 +17,10 @@ const Main: React.FC = () => {
       <SearchBar
         results={result}
         action={() => {
-          console.log('test');
+          console.log("test");
         }}
         maxToShow={4}
-        inputProps={{placeholder: "Search by username",}}
+        inputProps={{ placeholder: "Search by username" }}
       />
     </div>
   );

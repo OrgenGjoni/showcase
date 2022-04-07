@@ -1,7 +1,7 @@
-import React from 'react';
-import { user } from '../../../types/user.type';
-import './search_result_item.scss';
-import { normalizeAmount } from '../../../utils';
+import React from "react";
+import { user } from "../../../types/user.type";
+import "./search_result_item.scss";
+import { normalizeAmount } from "../../../utils";
 import { MdOutlineAlternateEmail, MdPeopleOutline } from "react-icons/md";
 
 interface SearchResultItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
@@ -17,8 +17,14 @@ const SearchResultItem: React.FC<SearchResultItemProps> = ({
       <div className="result-item__inner">
         <img src={user.profilePicSrc} loading="lazy" />
         <div className="result-item__inner-data">
-          <span><MdOutlineAlternateEmail className="result-item__inner-data__icon" />{user.username}</span>
-          <small><MdPeopleOutline className="result-item__inner-data__icon" />{normalizeAmount(user.followersAmount)}</small>
+          <span>
+            <MdOutlineAlternateEmail className="result-item__inner-data__icon" />
+            {user.username}
+          </span>
+          <small>
+            <MdPeopleOutline className="result-item__inner-data__icon" />
+            &nbsp;{normalizeAmount(user.followersAmount)}
+          </small>
         </div>
       </div>
     </li>

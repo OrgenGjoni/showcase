@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosResponse } from "axios";
 
 const get = async <T>(query: string) => {
   const res: AxiosResponse<T> = await axios.get(
