@@ -2,30 +2,36 @@ import React from "react";
 import "./user_card.scss";
 import { FiUsers } from "react-icons/fi";
 import { IoMail } from "react-icons/io5";
+import { user } from "../../types/user.type";
+import { normalizeAmount } from "../../utils";
 
-const UserCard = () => {
+interface UserCardProps {
+  user: user
+}
+
+const UserCard: React.FC<UserCardProps> = ({user}) => {
   return (
     <div className="user-card">
       <div className="user-card__picture">
         <img
-          src="https://dummyimage.com/250x450/000/fff.jpg&text=avatar"
+          src={user.profilePicSrc}
           alt=""
         />
       </div>
       <div className="user-card__data">
-        <h3 className="user-card__data-name">test_test</h3>
+        <h3 className="user-card__data-name">{user.username}</h3>
         <small className="user-card__data-username">@test_test</small>
         <span className="user-card__data-bio">
-          📍 Lisbon ✈️ Flight attendant | TAP 🐶 @ben_mel_goldenretrievers 🐾
+          {user.bio}
         </span>
         <span>fashion-travel-food-health</span>
         <span className="user-card__data-location">
-          London, UK &nbsp; <IoMail />
+          {user.location} &nbsp; <IoMail />
         </span>
       </div>
       <div className="user-card__extra">
         <FiUsers className="user-card__extra-icon" />
-        <h1 className="user-card__extra-amount">20.5K</h1>
+        <h1 className="user-card__extra-amount">{normalizeAmount(user.followersAmount)}</h1>
         <span>Followers</span>
       </div>
     </div>

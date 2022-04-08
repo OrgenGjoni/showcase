@@ -1,9 +1,7 @@
 import React, {
   useState,
   useRef,
-  useEffect,
-  HTMLAttributes,
-  HtmlHTMLAttributes,
+  useEffect
 } from "react";
 import "./search_bar.scss";
 import { user } from "../../types/user.type";
@@ -13,7 +11,7 @@ import { GoSearch } from "react-icons/go";
 
 interface SearchBarProps {
   results: user[] | null;
-  action: () => void;
+  action: (user: user) => void;
   maxToShow: number;
   inputProps?: React.HTMLAttributes<HTMLInputElement>;
 }
@@ -48,15 +46,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
     }
   };
 
-  const handleAction = () => {
-    action();
+  const handleAction = (user: user) => {
+    action(user);
     setOpen(false);
   };
 
   const renderList = (): React.ReactElement<HTMLLIElement>[] | null => {
     if (matches) {
       return matches.map((el: user, idx: number) => (
-        <SearchResultItem user={el} key={idx} onClick={handleAction} />
+        <SearchResultItem user={el} key={idx} onClick={()=>{handleAction(el)}} />
       ));
     } else {
       return null;

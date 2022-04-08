@@ -21,7 +21,7 @@ const fetchUsers = createAsyncThunk(
 );
 
 export const searchSlice = createSlice({
-  name: "counter",
+  name: "search",
   initialState,
   reducers: {
     setLoading: (state: SearchState, action: { payload: boolean }) => {

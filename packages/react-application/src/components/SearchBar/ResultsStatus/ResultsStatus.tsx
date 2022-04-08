@@ -22,7 +22,7 @@ const ResultsStatus: React.FC<ResultsStatusProps> = ({
   );
   const ShowAllMsg = () => (
     <li className="results-status" onClick={showAllAction}>
-      <span className="results-status__more">Show all results</span>{" "}
+      <span className="results-status__more">Show all {resLength} results</span>{" "}
     </li>
   );
   return (
