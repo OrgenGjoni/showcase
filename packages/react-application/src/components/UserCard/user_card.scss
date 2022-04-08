@@ -1,5 +1,4 @@
 .user-card {
-  margin: 100px; //delete after
   display: flex;
   flex-direction: row;
   position: relative;
@@ -47,7 +46,7 @@
     }
     &-topics {
       margin: 5px 0 0 0;
-      font-size: 13px;
+      font-size: 12px;
     }
     &-location {
       font-size: 16px;

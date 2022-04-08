@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./profile.scss";
-import { UserCard } from "../../components";
+import { UserCard, Spinner } from "../../components";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchUser } from "../../store/slices/userSlice";
@@ -16,7 +16,12 @@ const Profile: React.FC = () => {
     }
   }, [id]);
 
-  return <div>{!!user && <UserCard user={user} />}</div>;
+  return (
+    <div className="profile-container">
+      {!!user && !loading && <UserCard user={user} />}
+      {loading && <Spinner />}
+    </div>
+  );
 };
 
 export default Profile;
