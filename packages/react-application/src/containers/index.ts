@@ -1,5 +1,5 @@
-import Main from "./main/Main";
-import Profile from "./profile/Profile";
+import Main from "./Main/Main";
+import Profile from "./Profile/Profile";
 import AllResults from "./AllResults/AllResults";
 
 export { Main, Profile, AllResults };

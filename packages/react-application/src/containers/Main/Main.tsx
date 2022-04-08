@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchUsers, setAllMatches } from "../../store/slices/searchSlice";
 import { SearchBar, NavBar, UserCard } from "../../components";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Profile from "../profile/Profile";
+import Profile from "../Profile/Profile";
 import AllResults from "../AllResults/AllResults";
 import { user } from "../../types/user.type";
 
