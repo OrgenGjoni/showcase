@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { user } from "../../types/user.type";
 
 const AllResults: React.FC = () => {
-  const dispatch = useAppDispatch();
   const { matches } = useAppSelector((state) => state.search);
   const navigate = useNavigate();
 
@@ -27,9 +26,11 @@ const AllResults: React.FC = () => {
   };
 
   return (
-    <div className="results-container">
-      <ul className="results-container__inner">{renderAllResults()}</ul>
-    </div>
+    matches && (
+      <div className="results-container">
+        <ul className="results-container__inner">{renderAllResults()}</ul>
+      </div>
+    )
   );
 };
 

@@ -2,6 +2,7 @@ import React from "react";
 import "./user_card.scss";
 import { FiUsers } from "react-icons/fi";
 import { IoMail } from "react-icons/io5";
+import { AiFillInstagram } from "react-icons/ai";
 import { user } from "../../types/user.type";
 import { normalizeAmount, serializeTopics } from "../../utils";
 
@@ -14,6 +15,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
     <div className="user-card">
       <div className="user-card__picture">
         <img src={user.profilePicSrc} alt="" />
+        <AiFillInstagram />
       </div>
       <div className="user-card__data">
         <h3 className="user-card__data-name">{user.username}</h3>
