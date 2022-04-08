@@ -1,8 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  useEffect
-} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./search_bar.scss";
 import { user } from "../../types/user.type";
 import SearchResultItem from "./SearchResultItem/SearchResultItem";
@@ -54,7 +50,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const renderList = (): React.ReactElement<HTMLLIElement>[] | null => {
     if (matches) {
       return matches.map((el: user, idx: number) => (
-        <SearchResultItem user={el} key={idx} onClick={()=>{handleAction(el)}} />
+        <SearchResultItem
+          user={el}
+          key={idx}
+          onClick={() => {
+            handleAction(el);
+          }}
+        />
       ));
     } else {
       return null;

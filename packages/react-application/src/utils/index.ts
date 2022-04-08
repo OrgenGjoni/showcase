@@ -14,3 +14,19 @@ export const normalizeAmount = (amount: number | string): string => {
     return `${res.toFixed(1)}K`;
   }
 };
+
+export const serializeTopics = (topics: string[]): string => {
+  let i: number = 0;
+  let res: string = "";
+  while (i < topics.length) {
+    if (i < topics.length - 1) {
+      res += `${topics[i]}·`;
+    } else {
+      res += topics[i];
+    }
+
+    i++;
+  }
+
+  return res;
+};

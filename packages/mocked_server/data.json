@@ -6,7 +6,8 @@
             "bio": "lorem ispum",
             "followersAmount": 3000,
             "location": "Spain",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "topics": ["travel", "food", "fashion", "sports"]
         },
         {
             "id": 2,
@@ -14,7 +15,8 @@
             "bio": "lorem ispum",
             "followersAmount": 3200,
             "location": "Spain",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar"
+            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "topics": ["travel", "food", "fashion", "cars", "tech"]
         },
         {
             "id": 3,

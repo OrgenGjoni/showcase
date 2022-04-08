@@ -12,9 +12,9 @@ const Main: React.FC = () => {
   const { result, loading } = useAppSelector((state) => state.search);
   const navigate = useNavigate();
 
-  const handleResultClick = (usr: user)=>{
+  const handleResultClick = (usr: user) => {
     navigate(`/user/${usr.id}`);
-  }
+  };
 
   useEffect(() => {
     dispatch(fetchUsers());

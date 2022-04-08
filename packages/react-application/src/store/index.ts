@@ -5,7 +5,7 @@ import userSlice from "./slices/userSlice";
 export const store = configureStore({
   reducer: {
     search: searchSlice,
-    user: userSlice
+    user: userSlice,
   },
 });
 

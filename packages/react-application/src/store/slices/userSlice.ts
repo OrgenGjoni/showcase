@@ -1,4 +1,8 @@
-import { createSlice, createAsyncThunk, ActionCreatorWithPayload } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+  ActionCreatorWithPayload,
+} from "@reduxjs/toolkit";
 import RESTService from "../../services/RESTService";
 import { user } from "../../types/user.type";
 
@@ -23,17 +27,19 @@ const fetchUser = createAsyncThunk(
 export const userSlice = createSlice({
   name: "user",
   initialState,
-  reducers: {
-  },
+  reducers: {},
   extraReducers: (builder) => {
-      builder
-      .addCase(fetchUser.pending, (state: UserState)=>{
+    builder
+      .addCase(fetchUser.pending, (state: UserState) => {
         state.loading = true;
       })
-      .addCase(fetchUser.fulfilled, (state: UserState, action: {payload: user})=>{
-        state.user = action.payload;
-        state.loading = false;
-      })
+      .addCase(
+        fetchUser.fulfilled,
+        (state: UserState, action: { payload: user }) => {
+          state.user = action.payload;
+          state.loading = false;
+        }
+      );
   },
 });
 
