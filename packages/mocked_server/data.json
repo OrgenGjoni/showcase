@@ -24,7 +24,7 @@
             "bio": "lorem ispum",
             "followersAmount": 90000,
             "location": "Spain",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "profilePicSrc": "https://picsum.photos/400",
             "topics": ["travel", "food", "fashion"]
         },
         {
@@ -51,7 +51,7 @@
             "bio": "Lorem ipsum dolor sit amet",
             "followersAmount": 23453345,
             "location": "London",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "profilePicSrc": "https://picsum.photos/400",
             "topics": ["travel", "food", "fashion"]
         },
         {
@@ -60,7 +60,7 @@
             "bio": "lorem ispum Lorem ipsum dolor sit amet, consectetur adipiscing",
             "followersAmount": 23453345,
             "location": "Spain",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "profilePicSrc": "https://source.unsplash.com/random",
             "topics": ["travel", "food", "fashion"]
         },
         {
@@ -69,14 +69,14 @@
             "bio": "lorem ispum",
             "followersAmount": 23453345,
             "location": "Spain",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "profilePicSrc": "https://picsum.photos/400",
             "topics": ["travel", "food", "fashion"]
         },
         {
             "id": 9,
-            "username": "baz",
+            "username": "Emilu",
             "bio": "lorem ispum",
-            "followersAmount": 23453345,
+            "followersAmount": 53453345,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
             "topics": ["travel", "food", "fashion"]
@@ -87,16 +87,52 @@
             "bio": "lorem ispum",
             "followersAmount": 23453345,
             "location": "Spain",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "profilePicSrc": "https://picsum.photos/400",
             "topics": ["travel", "food", "fashion"]
         },
         {
             "id": 11,
-            "username": "baz",
-            "bio": "lorem ispum",
+            "username": "Jack",
+            "bio": "lorem ispum bla bla bla",
             "followersAmount": 23453345,
             "location": "Spain",
-            "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
+            "profilePicSrc": "https://picsum.photos/400",
+            "topics": ["travel", "food", "fashion"]
+        },
+        {
+            "id": 12,
+            "username": "Daniela",
+            "bio": "lorem ispum bla bla bla",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://source.unsplash.com/random",
+            "topics": ["travel", "food", "fashion"]
+        },
+        {
+            "id": 13,
+            "username": "Jane",
+            "bio": "lorem ispum 😃bla bla bla",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://source.unsplash.com/random",
+            "topics": ["travel", "food", "fashion"]
+        },
+        {
+            "id": 14,
+            "username": "Pablo",
+            "bio": "lorem ispum bla bla bla",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://source.unsplash.com/random",
+            "topics": ["travel", "food", "fashion"]
+        },
+        {
+            "id": 15,
+            "username": "Sara",
+            "bio": "lorem ispum bla bla bla 😃",
+            "followersAmount": 23453345,
+            "location": "Spain",
+            "profilePicSrc": "https://source.unsplash.com/random",
             "topics": ["travel", "food", "fashion"]
         }
     ]
