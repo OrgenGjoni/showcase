@@ -1,6 +1,9 @@
 .result-item {
   max-height: 50px;
+  width: 100%;
   cursor: pointer;
+  list-style: none;
+  background-color: #ffffff;
   &:hover {
     opacity: 0.7;
   }

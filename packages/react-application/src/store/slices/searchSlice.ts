@@ -11,7 +11,7 @@ export interface SearchState {
 const initialState: SearchState = {
   result: null,
   loading: false,
-  matches: null
+  matches: null,
 };
 
 const fetchUsers = createAsyncThunk(
@@ -29,10 +29,9 @@ export const searchSlice = createSlice({
     setLoading: (state: SearchState, action: { payload: boolean }) => {
       state.loading = action.payload;
     },
-    setAllMatches: (state: SearchState, action: {payload: user[] | null})=>{
+    setAllMatches: (state: SearchState, action: { payload: user[] | null }) => {
       state.matches = action.payload;
-    }
-
+    },
   },
   extraReducers: (builder) => {
     builder

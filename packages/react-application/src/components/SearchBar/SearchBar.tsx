@@ -8,7 +8,7 @@ import { GoSearch } from "react-icons/go";
 interface SearchBarProps {
   results: user[] | null;
   selectAction: (user: user) => void;
-  showAllAction: (allMatches: user[] | null)=> void;
+  showAllAction: (allMatches: user[] | null) => void;
   maxToShow: number;
   inputProps?: React.HTMLAttributes<HTMLInputElement>;
 }
@@ -26,22 +26,22 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const searchBarRef = useRef<null | HTMLDivElement>(null);
   const inputRef = useRef<null | HTMLInputElement>(null);
 
-  const filterMatches = ()=>{
-    if (inputRef.current !== null && results){
+  const filterMatches = () => {
+    if (inputRef.current !== null && results) {
       const regexp = new RegExp(`${inputRef.current.value}`, "i");
       const match = results.filter((el: user) => el.username.match(regexp));
       return match;
-    }else{
+    } else {
       return null;
     }
-  }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const match = filterMatches();
-      if(match !== null) {
-        setTotalMatchLen(match.length);
-        setMatches(e.target.value.length > 0 ? match.slice(0, maxToShow) : null);
-      }
+    const match = filterMatches();
+    if (match !== null) {
+      setTotalMatchLen(match.length);
+      setMatches(e.target.value.length > 0 ? match.slice(0, maxToShow) : null);
+    }
   };
 
   const handleFocus = () => {
@@ -75,10 +75,10 @@ const SearchBar: React.FC<SearchBarProps> = ({
     }
   };
 
-  const handleShowAllAction = ()=>{
+  const handleShowAllAction = () => {
     showAllAction(filterMatches());
     setOpen(false);
-  }
+  };
 
   useEffect(() => {
     if (open) {

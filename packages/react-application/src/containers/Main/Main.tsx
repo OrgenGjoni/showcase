@@ -17,8 +17,9 @@ const Main: React.FC = () => {
     navigate(`/user/${usr.id}`);
   };
 
-  const handleShowAllClick = (data: user[] | null)=>{
+  const handleShowAllClick = (data: user[] | null) => {
     dispatch(setAllMatches(data));
+    navigate("/search-results");
   };
 
   useEffect(() => {
@@ -36,12 +37,10 @@ const Main: React.FC = () => {
           inputProps={{ placeholder: "Search by username" }}
         />
       </NavBar>
-      <div>
-        <Routes>
-          <Route path="/user/:id" element={<Profile />} />
-          <Route path="/search-results" element={<AllResults />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/user/:id" element={<Profile />} />
+        <Route path="/search-results" element={<AllResults />} />
+      </Routes>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import "./scss/_main.scss";
-import Main from "./containers/main/Main";
+import Main from "./containers/Main/Main";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { BrowserRouter as Router } from "react-router-dom";
