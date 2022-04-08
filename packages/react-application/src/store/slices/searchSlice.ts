@@ -5,11 +5,13 @@ import { user } from "../../types/user.type";
 export interface SearchState {
   result: null | user[];
   loading: boolean;
+  matches: user[] | null;
 }
 
 const initialState: SearchState = {
   result: null,
   loading: false,
+  matches: null
 };
 
 const fetchUsers = createAsyncThunk(
@@ -27,6 +29,10 @@ export const searchSlice = createSlice({
     setLoading: (state: SearchState, action: { payload: boolean }) => {
       state.loading = action.payload;
     },
+    setAllMatches: (state: SearchState, action: {payload: user[] | null})=>{
+      state.matches = action.payload;
+    }
+
   },
   extraReducers: (builder) => {
     builder
@@ -43,7 +49,7 @@ export const searchSlice = createSlice({
   },
 });
 
-export const { setLoading } = searchSlice.actions;
+export const { setLoading, setAllMatches } = searchSlice.actions;
 export { fetchUsers };
 
 export default searchSlice.reducer;

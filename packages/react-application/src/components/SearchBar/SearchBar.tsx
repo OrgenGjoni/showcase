@@ -7,14 +7,16 @@ import { GoSearch } from "react-icons/go";
 
 interface SearchBarProps {
   results: user[] | null;
-  action: (user: user) => void;
+  selectAction: (user: user) => void;
+  showAllAction: (allMatches: user[] | null)=> void;
   maxToShow: number;
   inputProps?: React.HTMLAttributes<HTMLInputElement>;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
   results,
-  action,
+  selectAction,
+  showAllAction,
   maxToShow,
   inputProps,
 }) => {
@@ -22,14 +24,24 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const [open, setOpen] = useState<boolean>(false);
   const [totalMatchLen, setTotalMatchLen] = useState<number>(0);
   const searchBarRef = useRef<null | HTMLDivElement>(null);
+  const inputRef = useRef<null | HTMLInputElement>(null);
+
+  const filterMatches = ()=>{
+    if (inputRef.current !== null && results){
+      const regexp = new RegExp(`${inputRef.current.value}`, "i");
+      const match = results.filter((el: user) => el.username.match(regexp));
+      return match;
+    }else{
+      return null;
+    }
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (results !== null) {
-      const regexp = new RegExp(`${e.target.value}`, "i");
-      const match = results.filter((el: user) => el.username.match(regexp));
-      setTotalMatchLen(match.length);
-      setMatches(e.target.value.length > 0 ? match.slice(0, maxToShow) : null);
-    }
+      const match = filterMatches();
+      if(match !== null) {
+        setTotalMatchLen(match.length);
+        setMatches(e.target.value.length > 0 ? match.slice(0, maxToShow) : null);
+      }
   };
 
   const handleFocus = () => {
@@ -43,7 +55,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   const handleAction = (user: user) => {
-    action(user);
+    selectAction(user);
     setOpen(false);
   };
 
@@ -63,6 +75,11 @@ const SearchBar: React.FC<SearchBarProps> = ({
     }
   };
 
+  const handleShowAllAction = ()=>{
+    showAllAction(filterMatches());
+    setOpen(false);
+  }
+
   useEffect(() => {
     if (open) {
       document.addEventListener("click", verifyTarget);
@@ -78,6 +95,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
       <GoSearch className="search-bar__search-icon" />
       <input
         {...inputProps}
+        ref={inputRef}
         type="text"
         className="search-bar__input"
         onChange={handleChange}
@@ -91,9 +109,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         <ResultsStatus
           resLength={totalMatchLen}
           showPoint={maxToShow}
-          showAllAction={() => {
-            console.log("Clicked show all");
-          }}
+          showAllAction={handleShowAllAction}
         />
       </ul>
     </div>

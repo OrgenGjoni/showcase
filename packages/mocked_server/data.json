@@ -30,7 +30,7 @@
         {
             "id": 4,
             "username": "baz",
-            "bio": "lorem ispum",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             "followersAmount": 23453345,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
@@ -38,8 +38,8 @@
         },
         {
             "id": 5,
-            "username": "baz",
-            "bio": "lorem ispum",
+            "username": "random",
+            "bio": "Lorem ipsum dolor sit amet,  :)))) adipiscing elit",
             "followersAmount": 23453345,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
@@ -47,17 +47,17 @@
         },
         {
             "id": 6,
-            "username": "baz",
-            "bio": "lorem ispum",
+            "username": "Lisa",
+            "bio": "Lorem ipsum dolor sit amet",
             "followersAmount": 23453345,
-            "location": "Spain",
+            "location": "London",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",
             "topics": ["travel", "food", "fashion"]
         },
         {
             "id": 7,
-            "username": "baz",
-            "bio": "lorem ispum",
+            "username": "Liam",
+            "bio": "lorem ispum Lorem ipsum dolor sit amet, consectetur adipiscing",
             "followersAmount": 23453345,
             "location": "Spain",
             "profilePicSrc": "https://dummyimage.com/600x400/000/fff.jpg&text=avatar",

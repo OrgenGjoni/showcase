@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "./main.scss";
 import { useAppDispatch, useAppSelector } from "../../hooks";
-import { fetchUsers } from "../../store/slices/searchSlice";
+import { fetchUsers, setAllMatches } from "../../store/slices/searchSlice";
 import { SearchBar, NavBar, UserCard } from "../../components";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Profile from "../profile/Profile";
+import AllResults from "../AllResults/AllResults";
 import { user } from "../../types/user.type";
 
 const Main: React.FC = () => {
@@ -16,6 +17,10 @@ const Main: React.FC = () => {
     navigate(`/user/${usr.id}`);
   };
 
+  const handleShowAllClick = (data: user[] | null)=>{
+    dispatch(setAllMatches(data));
+  };
+
   useEffect(() => {
     dispatch(fetchUsers());
   }, []);
@@ -25,7 +30,8 @@ const Main: React.FC = () => {
       <NavBar>
         <SearchBar
           results={result}
-          action={handleResultClick}
+          selectAction={handleResultClick}
+          showAllAction={handleShowAllClick}
           maxToShow={4}
           inputProps={{ placeholder: "Search by username" }}
         />
@@ -33,6 +39,7 @@ const Main: React.FC = () => {
       <div>
         <Routes>
           <Route path="/user/:id" element={<Profile />} />
+          <Route path="/search-results" element={<AllResults />} />
         </Routes>
       </div>
     </div>
